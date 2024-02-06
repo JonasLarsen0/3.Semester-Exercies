@@ -82,3 +82,99 @@ button {
   right: 0px;
   width: 50%;
 }
+
+
+
+----Codepen Jorge C.S. exercise----
+--HTML--
+<div class="background"></div>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+  <div class="grid-item">
+    <div class="circle"></div>
+  </div>
+</div>
+
+
+--CSS--
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://via.placeholder.com/1920x1080'); 
+  background-position: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+    /* repeat(3, 1fr) creates three tracks, each taking up an 
+    equal portion of the available space in the grid container */
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 255, 0.5); /* RGB colors and "a" is used to adjust opacity */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+--JS--
+var colors = ["blue", "orange", "red", "yellow"];
+  var currentColor = 0;
+  document.addEventListener('DOMContentLoaded', function() {
+    const circles = document.querySelectorAll('.circle');
+    function changeColor() {
+      circles.forEach(circle => {
+        circle.style.backgroundColor = colors[currentColor];
+        circle.style.opacity = 0.5;
+      });
+    currentColor = (currentColor + 1) % colors.length;
+    }
+    window.addEventListener('click', changeColor);
+  });
+
+
