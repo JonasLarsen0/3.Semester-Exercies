@@ -1,4 +1,5 @@
 ----Gocoding exercise----
+FROM https://gocoding.org/html-practice-exercises/
 --HTML--
 <!DOCTYPE html>
 <html lang="en">
@@ -86,6 +87,7 @@ button {
 
 
 ----Codepen Jorge C.S. exercise----
+FROM https://codepen.io/jorgecardoso/post/0-basics-html-css-javascript
 --HTML--
 <div class="background"></div>
 
