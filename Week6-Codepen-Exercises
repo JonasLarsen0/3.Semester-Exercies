@@ -1,0 +1,84 @@
+----Gocoding exercise----
+--HTML--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1: Facebook</title>
+</head>
+<body>
+  <div class="left-half">
+    <h1>Exercise 1: Facebook</h1>
+    <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook logo" style="width:150px; height:150px">
+    <p>Facebook, Inc. is an American online social media and social networking service company. It is based in Menlo Park, California.</p>
+    <p>For more information, <a href="https://en.wikipedia.org/wiki/Facebook">click here</a>.</p>
+  </div>
+  <div class="right-half">
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <button type="submit">Signup</button>
+    </form>
+  </div> 
+</body>
+</html>
+
+--CSS--
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    width: 200px;
+}
+
+a {
+    color: blue;
+}
+form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+button {
+    margin-right: 10px; 
+    margin-bottom: 10px;
+}
+.left-half {
+  position: absolute;
+  margin: 10px;
+  left: 0px;
+  width: 50%;
+}
+
+.right-half {
+  position: absolute;
+  margin: 10px;
+  right: 0px;
+  width: 50%;
+}
